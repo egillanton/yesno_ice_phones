@@ -1,5 +1,5 @@
 <p align="center"><i>
-  Kaldi-ASR  Basic Project <br/>
+  Kaldi-ASR  Advanced Project <br/>
   T-718-ATSR - Automatic Speech Recognition, TD-MSc, 2019-1 <br/>
   Reykjavik University - School of Computer Science, Menntavegur 1, IS-101 Reykjavik, Iceland
 </i></p>
@@ -25,7 +25,7 @@
 <!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
 
 ## 1 Introduction
-A modified version of the [Kaldi-ASR yesno](https://github.com/kaldi-asr/kaldi/tree/master/egs/yesno) example project adjusted for Icelandic and for multiple speakers.
+A modified version of the [Kaldi-ASR yesno](https://github.com/kaldi-asr/kaldi/tree/master/egs/yesno) example project adjusted for Icelandic, for multiple speakers, and finally, it has to use phone-based model instead of wrod based-model.
 
 
 ## 2 The Dataset
@@ -119,6 +119,38 @@ Set the correct sample-frequency configuration based on the waves_yesno .wav fil
 ```bash
 --sample-frequency=16000 #  waves_yesno is sampled at 16kHz
 ```
+### 3.6 input/lexicon.txt
+For changing the model from a word-based model to a phone-based one, we will need to change the lexicon for our system.
+
+input/lexicon.txt
+
+```txt
+<SIL> SIL
+YES J A U
+NO N E I
+```
+
+For simplicity we cept the same labels, but changed the corresponding phonems.
+
+
+lexicon_nosil.txt
+
+```txt
+YES J A U
+NO N E I
+```
+
+phones.txt
+
+```txt
+SIL
+A
+E
+I
+J
+N
+U
+```
 
 ### Done
 
@@ -127,6 +159,12 @@ Now we should be able to run the run.sh file successfully.
 ```bash
 $ cd s5/
 $ bash run.sh
+```
+
+Expected output result:
+
+```bash
+%WER 11.46 [ 11 / 96, 7 ins, 1 del, 3 sub ] exp/mono0a/decode_test_yesno/wer_14_1.0
 ```
 
 ## 4 Authors
