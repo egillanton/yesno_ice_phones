@@ -25,7 +25,7 @@
 <!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
 
 ## 1 Introduction
-A modified version of the [Kaldi-ASR yesno](https://github.com/kaldi-asr/kaldi/tree/master/egs/yesno) example project adjusted for Icelandic, for multiple speakers, and finally, it has to use phone-based model instead of wrod based-model.
+A modified version of the [Kaldi-ASR yesno](https://github.com/kaldi-asr/kaldi/tree/master/egs/yesno) example project adjusted for Icelandic, for multiple speakers, and finally, it it uses a phone-based model instead of word based-model.
 
 
 ## 2 The Dataset
