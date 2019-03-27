@@ -70,7 +70,7 @@ Remember to re-compile the script.
 $ chmod 777 s5/run.sh
 ```
 
-### 3.2 local/create_yesno_txt.pl
+### 3.2 [local/create_yesno_txt.pl](s5/local/create_yesno_txt.pl)
 
 Add following code to the while loop:
 
