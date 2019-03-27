@@ -81,7 +81,7 @@ Add following code to the while loop:
 This will remove the speaker Id from our filename when creating our data/{X}/text files.
 
 
-### 3.3 local/create_yesno_waves_test_train.pl
+### 3.3 [local/create_yesno_waves_test_train.pl](s5/local/create_yesno_waves_test_train.pl)
 
 Specify which speakers you want to have in the test set.
 
@@ -100,7 +100,7 @@ while ($l = <FL>)
 }
 ```
 
-### 3.4 local/prepare_data.sh 
+### 3.4 [local/prepare_data.sh](s5/local/prepare_data.sh) 
 
 Edit the code so each utterece has it corresponding speaker id istead of global.
 
@@ -113,13 +113,13 @@ Remember to re-compile the script.
 $ chmod 777 s5/local/prepare_data.sh 
 ```
 
-### 3.5 conf/mfcc.conf
+### 3.5 [conf/mfcc.conf](s5/conf/mfcc.conf)
 Set the correct sample-frequency configuration based on the waves_yesno .wav file format.
 
 ```bash
 --sample-frequency=16000 #  waves_yesno is sampled at 16kHz
 ```
-### 3.6 input/lexicon.txt
+### 3.6 [input/lexicon.txt](s5/input/lexicon.txt)
 For changing the model from a word-based model to a phone-based one, we will need to change the lexicon for our system.
 
 input/lexicon.txt
